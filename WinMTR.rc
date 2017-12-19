@@ -1,0 +1,433 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Русский (Россия) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_WINMTR_DIALOG DIALOGEX 0, 0, 423, 225
+STYLE DS_SETFONT | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Начать",ID_RESTART,203,12,50,14,BS_FLAT
+    PUSHBUTTON      "&Опции",ID_OPTIONS,303,12,51,14,BS_FLAT
+    PUSHBUTTON      "В&ыход",IDCANCEL,360,12,49,14,BS_FLAT
+    PUSHBUTTON      "&Копировать txt в буфер",ID_CTTC,14,39,93,14,BS_FLAT
+    PUSHBUTTON      "Копи&ровать HTML в буфер",ID_CHTC,127,39,100,14,BS_FLAT
+    PUSHBUTTON      "Экспорт в &txt",ID_EXPT,228,39,67,14,BS_FLAT
+    PUSHBUTTON      "Экспорт в &html",ID_EXPH,314,39,63,14,BS_FLAT
+    CONTROL         "List1",IDC_LIST_MTR,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,92,409,126
+    LTEXT           "Хост",IDC_STATIC,13,12,20,13,SS_CENTERIMAGE
+    GROUPBOX        "",IDC_STATIC,7,3,251,29,BS_FLAT
+    GROUPBOX        "",IDC_STATICS,296,3,120,29,BS_FLAT
+    GROUPBOX        "",IDC_STATICJ,7,31,409,26,BS_FLAT
+    COMBOBOX        IDC_COMBO_HOST,35,12,164,73,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_OPTIONS DIALOGEX 0, 0, 251, 164
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Опции"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&Хорошо",IDOK,53,143,50,14,BS_FLAT
+    PUSHBUTTON      "&Отмена",IDCANCEL,141,143,50,14,BS_FLAT
+    GROUPBOX        "",IDC_STATIC,7,91,237,46,BS_FLAT
+    ICON            IDR_MAINFRAME,IDC_STATIC,15,12,20,20
+    LTEXT           "Интервал (сек):",IDC_STATIC,15,102,54,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_INTERVAL,71,99,34,13,ES_AUTOHSCROLL
+    LTEXT           "Размер Ping (байты):",IDC_STATIC,118,102,74,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_SIZE,196,99,34,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Разрешить имена",IDC_CHECK_DNS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,167,119,77,8
+    GROUPBOX        "",IDC_STATIC,7,7,237,82,BS_FLAT
+    CTEXT           "Сделано на базе WinMTR. Переведено на русский язык командой проекта ",IDC_STATIC,31,34,201,17
+    CTEXT           "ruWinMTR v0.92 русская версия, лицензия GNU GPL v2",IDC_STATIC,42,14,194,17
+    PUSHBUTTON      "&Лицензия",ID_LICENSE,81,67,94,14,BS_FLAT
+    LTEXT           "Макс. хостов в LRU:",IDC_STATIC,15,119,74,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_MAX_LRU,90,116,34,13,ES_AUTOHSCROLL
+    CONTROL         "КонтинентСвободы.рф",IDC_MFCLINK1,"MfcLink",WS_TABSTOP,92,50,80,11
+END
+
+IDD_DIALOG_LICENSE DIALOGEX 0, 0, 175, 70
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Лицензия"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "Хорошо",IDOK,59,43,50,14
+    LTEXT           "Переведено:",IDC_STATIC,19,28,44,8
+    CONTROL         "континентсвободы.рф",IDC_MFCLINK1,"MfcLink",WS_TABSTOP,61,26,76,14
+    LTEXT           "Лицензия GNU GPL V2.",IDC_STATIC,33,14,81,8
+END
+
+IDD_DIALOG_PROPERTIES DIALOGEX 0, 0, 201, 159
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Настройки хоста"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "Хорошо",IDOK,71,138,50,14,BS_FLAT
+    LTEXT           "Имя:",IDC_STATIC,15,18,24,8
+    EDITTEXT        IDC_EDIT_PHOST,48,16,136,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "IP адрес:",IDC_STATIC,14,32,40,9
+    EDITTEXT        IDC_EDIT_PIP,58,31,126,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Пакеты",IDC_STATIC,7,74,89,60,BS_FLAT
+    GROUPBOX        "Время Ping",IDC_STATIC,108,74,86,60,BS_FLAT
+    GROUPBOX        "Хост",IDC_STATIC,7,7,187,62,BS_FLAT
+    LTEXT           "Потери (%):",IDC_STATIC,13,117,38,9
+    LTEXT           "Получено:",IDC_STATIC,13,101,36,9
+    LTEXT           "Отправ.:",IDC_STATIC,13,85,35,9
+    LTEXT           "Последнее:",IDC_STATIC,110,84,40,9
+    LTEXT           "Лучшее:",IDC_STATIC,114,96,32,8
+    LTEXT           "Среднее:",IDC_STATIC,111,107,35,8
+    LTEXT           "Худшее:",IDC_STATIC,114,118,32,8
+    EDITTEXT        IDC_EDIT_PSENT,53,82,35,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_EDIT_PRECV,53,99,35,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_EDIT_PLOSS,53,116,35,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_EDIT_PLAST,150,81,34,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PBEST,150,94,34,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PAVRG,150,106,34,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PWORST,150,118,34,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PCOMMENT,14,50,170,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DIALOG_HELP DIALOGEX 0, 0, 283, 239
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ruWinMTR"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Хорошо",IDOK,144,218,50,14
+    CONTROL         "КонтинентСвободы.рф",IDC_MFCLINK1,"MfcLink",WS_TABSTOP,155,7,84,11
+    LTEXT           "ruWinMTR v0.92, Лицензия GNU GPL V2",IDC_STATIC,7,9,136,10
+    LTEXT           "Использование: ruWinMTR [опции] имя_целевого_хоста",IDC_STATIC,7,29,190,8
+    LTEXT           "Опции:",IDC_STATIC,7,39,25,8
+    LTEXT           "--interval, -i значение. Задать интервал пинг.",IDC_STATIC,26,47,156,8
+    LTEXT           "--size, -s значение. Размер пакета Ping.",IDC_STATIC,26,57,134,8
+    LTEXT           "--maxLRU, -m значение. Макс кол-во хостов в списке LRU.",IDC_STATIC,26,67,198,8
+    LTEXT           "--help, -h. Распечатать эту помощь.",IDC_STATIC,26,89,123,8
+    LTEXT           "--numeric, -n. Не разрешать имена.",IDC_STATIC,26,78,119,8
+    LTEXT           "Расшифровка полей:",IDC_STATIC,7,105,142,8
+    LTEXT           "Хост - Доменное имя или IP-адрес",IDC_STATIC,26,118,116,8
+    LTEXT           "№ - Номер хоста в маршруте",IDC_STATIC,26,132,100,8
+    LTEXT           "Loss % - процент потерь",IDC_STATIC,26,145,85,8
+    LTEXT           "Sent - Отправлено",IDC_STATIC,26,159,64,8
+    LTEXT           "Recv - Принято",IDC_STATIC,26,170,52,8
+    LTEXT           "Best - Лучшее время задержки (Меньшее)",IDC_STATIC,109,160,143,8
+    LTEXT           "Avrg - Среднее время задержки",IDC_STATIC,107,171,110,8
+    LTEXT           "Worst - Худшее время задержки (Большее)",IDC_STATIC,34,183,147,8
+    LTEXT           "Last - Последнее время задержки",IDC_STATIC,35,198,115,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_WINMTR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 416
+        VERTGUIDE, 270
+        VERTGUIDE, 321
+        VERTGUIDE, 328
+        VERTGUIDE, 377
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+        HORZGUIDE, 12
+        HORZGUIDE, 39
+    END
+
+    IDD_DIALOG_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_DIALOG_LICENSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 168
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_DIALOG_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_DIALOG_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        VERTGUIDE, 26
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 232
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_HELP DLGINIT
+BEGIN
+    IDC_MFCLINK1, 0x37c, 198, 0
+0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x683e, 0x7474, 0x3a70, 
+0x2f2f, 0x6e78, 0x2d2d, 0x3039, 0x6261, 0x6268, 0x6c6f, 0x6276, 0x6662, 
+0x6267, 0x6139, 0x656a, 0x6d34, 0x782e, 0x2d6e, 0x702d, 0x6131, 0x2f69, 
+0x2f3c, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x7255, 0x3e6c, 0x4d3c, 0x4346, 
+0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 0x6665, 0x7869, 0x3c3e, 0x4d2f, 
+0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 0x6665, 0x7869, 0x3c3e, 
+0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 0x2f3c, 
+0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 0x4d3c, 
+0x4346, 0x694c, 0x6b6e, 0x465f, 0x6c75, 0x546c, 0x7865, 0x5474, 0x6f6f, 
+0x746c, 0x7069, 0x463e, 0x4c41, 0x4553, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 
+0x5f6b, 0x7546, 0x6c6c, 0x6554, 0x7478, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 
+
+    0
+END
+
+IDD_DIALOG_OPTIONS DLGINIT
+BEGIN
+    IDC_MFCLINK1, 0x37c, 198, 0
+0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x683e, 0x7474, 0x3a70, 
+0x2f2f, 0x6e78, 0x2d2d, 0x3039, 0x6261, 0x6268, 0x6c6f, 0x6276, 0x6662, 
+0x6267, 0x6139, 0x656a, 0x6d34, 0x782e, 0x2d6e, 0x702d, 0x6131, 0x2f69, 
+0x2f3c, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x7255, 0x3e6c, 0x4d3c, 0x4346, 
+0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 0x6665, 0x7869, 0x3c3e, 0x4d2f, 
+0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 0x6665, 0x7869, 0x3c3e, 
+0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 0x2f3c, 
+0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 0x4d3c, 
+0x4346, 0x694c, 0x6b6e, 0x465f, 0x6c75, 0x546c, 0x7865, 0x5474, 0x6f6f, 
+0x746c, 0x7069, 0x463e, 0x4c41, 0x4553, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 
+0x5f6b, 0x7546, 0x6c6c, 0x6554, 0x7478, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 
+
+    0
+END
+
+IDD_DIALOG_LICENSE DLGINIT
+BEGIN
+    IDC_MFCLINK1, 0x37c, 198, 0
+0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x683e, 0x7474, 0x3a70, 
+0x2f2f, 0x6e78, 0x2d2d, 0x3039, 0x6261, 0x6268, 0x6c6f, 0x6276, 0x6662, 
+0x6267, 0x6139, 0x656a, 0x6d34, 0x782e, 0x2d6e, 0x702d, 0x6131, 0x2f69, 
+0x2f3c, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x7255, 0x3e6c, 0x4d3c, 0x4346, 
+0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 0x6665, 0x7869, 0x3c3e, 0x4d2f, 
+0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 0x6665, 0x7869, 0x3c3e, 
+0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 0x2f3c, 
+0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 0x4d3c, 
+0x4346, 0x694c, 0x6b6e, 0x465f, 0x6c75, 0x546c, 0x7865, 0x5474, 0x6f6f, 
+0x746c, 0x7069, 0x463e, 0x4c41, 0x4553, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 
+0x5f6b, 0x7546, 0x6c6c, 0x6554, 0x7478, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 
+
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG_HELP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_LICENSE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_OPTIONS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_PROPERTIES AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_WINMTR_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 100, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0
+END
+
+#endif    // Русский (Россия) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Английский (США) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "WinMTR.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,9,0,2
+ PRODUCTVERSION 0,9,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "WinMTR"
+            VALUE "FileVersion", "0.9.0.2"
+            VALUE "InternalName", "WinMTR"
+            VALUE "LegalCopyright", "ruWinMTR 0.92"
+            VALUE "OriginalFilename", "WinMTR.EXE"
+            VALUE "ProductName", "WinMTR Application"
+            VALUE "ProductVersion", "0.9.0.2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+    IDS_STRING_SB_NAME      "ruWinMTR v0.92"
+    IDS_STRING_SB_PING      "0000000"
+    IDS_STRING_CLEAR_HISTORY "Clear History"
+END
+
+#endif    // Английский (США) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
